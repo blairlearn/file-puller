@@ -1,14 +1,15 @@
-# Download a list of images from `www.cancer.gov`.
+# Download a list of files from a Cancer.gov web site.
 
-Usage: `./pull.sh < imagelist.txt`
+Usage: `./pull.sh server storage < imagelist.txt`
+
+e.g. `pull www.cancer.gov ~/mig_files/CGOV`
 
 Run it from the directory where you want the images to be downloaded.
 
-`imagelist.txt` is a straight-forward list of images to download, with just a
-relative path to download from, one entry per line.  All files are downloaded
-relative to `https://www.cancer.gov/PublishedContent/Images/` and stored in
+`imagelist.txt` is a straight-forward list of files to download, with just a
+relative path to download from, one entry per line.  All files are stored in
 a directory matching the path they came from.
 
-e.g. If the entry is `images/cancer-types/head-neck/headandneck-diagram.jpg`, the image
+e.g. If the entry is `PublishedContent/Images/images/cancer-types/head-neck/headandneck-diagram.jpg`, the image
 is downloaded from `https://www.cancer.gov/PublishedContent/Images/images/cancer-types/head-neck/headandneck-diagram.jpg` and
-stored as `images/cancer-types/head-neck/headandneck-diagram.jpg` under the current directory.
+stored as `PublishedContent/Images/images/cancer-types/head-neck/headandneck-diagram.jpg` under the current directory.
